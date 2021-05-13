@@ -15,6 +15,10 @@ export class QuotesComponent implements OnInit {
     new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.'),
     new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.'),
   ];
+
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {

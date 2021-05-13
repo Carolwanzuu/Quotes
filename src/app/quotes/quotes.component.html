@@ -1,11 +1,15 @@
 <div>
-    <h1>Quotes</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur magni at numquam iusto asperiores nemo eveniet quis rerum, mollitia veritatis quasi, neque officiis, sequi magnam laudantium quas itaque recusandae?</p>
-    <ul>
-      
-        <li *ngFor='let quote of quotes'>
-            {{quote.name}}
-            <app-quote-detail [quote] = 'quote'></app-quote-detail>
-        </li>
-    </ul>
+  <h1>Quotes</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur magni at numquam iusto asperiores
+    nemo eveniet quis rerum, mollitia veritatis quasi, neque officiis, sequi magnam laudantium quas itaque recusandae?
+  </p>
+  <ul>
+
+    <div *ngFor='let quote of quotes; let i = index'>
+      <li>{{quote.name}}</li>
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
+      <app-quote-detail *ngIf = 'quote.showDescription' [quote]='quote'></app-quote-detail>
+
     </div>
+  </ul>
+  <p *ngIf = 'quote.length>5'>The Quotes are too many</p>
