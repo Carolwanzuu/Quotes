@@ -8,6 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
 
+  title:'Quotes';
   quotes:Quote[]=[
     {id:1, name:'Anais Nin', description:'We write to taste life twice, in the moment and in retrospect'},
     {id:2, name:'Mark Twain', description:'One day I will find the right words, and they will be simple.'},
