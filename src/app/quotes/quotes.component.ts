@@ -10,10 +10,10 @@ export class QuotesComponent implements OnInit {
 
   title:'Quotes';
   quotes:Quote[]=[
-    {id:1, name:'Anais Nin', description:'We write to taste life twice, in the moment and in retrospect'},
-    {id:2, name:'Mark Twain', description:'One day I will find the right words, and they will be simple.'},
-    {id:3, name:'Robert Frost', description:'No tears in the writer, no tears in the reader.'},
-    {id:4, name:'Henry David', description:'How vain it is to sit down to write when you have not stood up to live.'},
+    new Quote(1, 'Anais Nin', 'We write to taste life twice, in the moment and in retrospect'),
+    new Quote(2, 'Mark Twain', 'One day I will find the right words, and they will be simple.'),
+    new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.'),
+    new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.'),
   ];
   constructor() { }
 
