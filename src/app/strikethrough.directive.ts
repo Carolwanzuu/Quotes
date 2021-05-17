@@ -15,7 +15,7 @@ export class StrikethroughDirective {
   }
 
   private textDeco(action:string){
-    this.elem.nativeElement.style.textDecoration = 'line-through';
+    this.elem.nativeElement.style.textDecoration = action;
    }
 
 }
