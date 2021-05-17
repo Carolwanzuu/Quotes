@@ -13,12 +13,15 @@
 
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event, i)'></app-quote-detail>
+          <button class = "btn btn-success" (click)='upVote'>upVote{{upVote}}</button>
+          <button class = "btn btn-success" (click)='downVote'>downVote{{downVote}}</button>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <app-quote-form></app-quote-form>
+      <app-quote-form ></app-quote-form>
     </div>
 
     <p *ngIf='quotes.length>5'>The Quotes are too many</p>
   </div>
+  <!-- (addQuote)="addNewQuote($event)" -->
