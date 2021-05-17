@@ -12,3 +12,7 @@ p{
     font-family: fantasy;
     font-weight: 500;
 }
+button{
+    padding:5px;
+    margin:10px;
+}
