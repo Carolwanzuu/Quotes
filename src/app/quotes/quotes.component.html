@@ -13,8 +13,8 @@
 
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event, i)'></app-quote-detail>
-          <button class="btn btn-success" (click)='upVote'>upVote<span>{{upVote}}</span></button>
-          <button class="btn btn-success" (click)='downVote'>downVote<span>{{downVote}}</span></button>
+          <button class="btn btn-success" (click)='upVote()'>upVote <span>{{upVotes}}</span></button>
+          <button class="btn btn-success" (click)='downVote()'>downVote <span>{{downVotes}}</span></button>
         </div>
       </div>
     </div>
