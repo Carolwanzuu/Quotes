@@ -35,7 +35,10 @@ export class QuotesComponent implements OnInit {
       this.quotes.push(quote)
     }
   
-
+    upVotes:number=0;
+    upVote(){
+      this.upVotes=this.upVotes+1;
+    }
   constructor() { }
 
   ngOnInit(): void {
