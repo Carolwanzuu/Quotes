@@ -10,7 +10,7 @@
         recusandae?
       </p>
       <div *ngFor='let quote of quotes; let i = index'>
-        <h4 id={{i}} appStrikethrough>{{quote.name}}</h4>
+        <h4 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}} </h4>
         <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
 
         <div *ngIf='quote.showDescription'>

@@ -10,10 +10,10 @@ export class QuotesComponent implements OnInit {
 
   title:'Quotes';
   quotes:Quote[]=[
-    new Quote(1, 'Anais Nin', 'We write to taste life twice, in the moment and in retrospect'),
-    new Quote(2, 'Mark Twain', 'One day I will find the right words, and they will be simple.'),
-    new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.'),
-    new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.'),
+    new Quote(1, 'Anais Nin', 'We write to taste life twice, in the moment and in retrospect', new Date(2021,4,20)),
+    new Quote(2, 'Mark Twain', 'One day I will find the right words, and they will be simple.', new Date(2018,10,13)),
+    new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.', new Date(2014,6, 29)),
+    new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.',new Date(2020,1,12)),
   ];
 
   toggleDetails(index){
