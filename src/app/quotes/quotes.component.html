@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="jumbotron">
+  <div class="card-header bg-black">
     <h1>Quotes</h1>
   </div>
   <div class="row">
@@ -19,7 +19,7 @@
 
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event, i)'></app-quote-detail>
-          <button class="btn btn-success" (click)='upVote()'>upVote <span>{{upVotes}}</span></button>
+          <button class="btn btn-success" (click)='upVote()'>upVote <span>{{quote.upVotes}}</span></button>
           <button class="btn btn-success" (click)='downVote()'>downVote <span>{{downVotes}}</span></button>
         </div>
       </div>

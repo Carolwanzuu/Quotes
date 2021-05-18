@@ -37,16 +37,16 @@ export class QuotesComponent implements OnInit {
       this.quotes.push(quote)
     }
   
-    upVotes:number=0;
-    upVote(){
-      this.upVotes=this.upVotes+1;
+    // upVotes:number=0;
+    // upVote(){
+    //   this.upVotes=this.upVotes+1;
 
-    }
+    // }
 
-    downVotes:number=0;
-    downVote(){
-      this.downVotes=this.downVotes-1;
-    }
+    // downVotes:number=0;
+    // downVote(){
+    //   this.downVotes=this.downVotes-1;
+    // }
   constructor() { }
 
   ngOnInit(): void {
