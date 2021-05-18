@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card-header bg-black">
-    <h1>Quotes</h1>
+    <h1>Quotes </h1>
   </div>
   <div class="row">
    
@@ -10,18 +10,19 @@
     <div class="col-md-6">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur magni at numquam iusto
         asperiores
-        nemo eveniet quis rerum, mollitia veritatis quasi, neque officiis, sequi magnam laudantium quas itaque
-        recusandae?
+        nemo eveniet quis rerum?
       </p>
       <div *ngFor='let quote of quotes; let i = index'>
-        <h4 id={{i}} appStrikethrough>{{quote.author}} due on {{quote.completeDate|date}} </h4>
+        <h4 id={{i}} appStrikethrough>{{quote.name}} posted on {{quote.completeDate|date}} </h4>
         <button (click)='toggleDetails(i)' class="btn btn-info">Toggle Details</button>
-
-        <div *ngIf='quote.showDescription'>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event, i)'></app-quote-detail>
+        <!-- <div *ngIf='quote.showDescription'>
+          <p>This quote was posted by {{quote.author}}.</p>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event, i)'></app-quote-detail>
-          <button class="btn btn-success" (click)='upVote()'>upVote <span>{{quote.upVotes}}</span></button>
-          <button class="btn btn-success" (click)='downVote()'>downVote <span>{{downVotes}}</span></button>
-        </div>
+          
+          <button class="btn btn-secondary" (click)='upVote()'>upVote <span>{{quote.upVotes}}</span></button>
+          <button class="btn btn-secondary" (click)='downVote()'>downVote <span>{{downVotes}}</span></button>
+        </div> -->
       </div>
     </div>
 
