@@ -4,14 +4,14 @@
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-group">
       <label for="name">Author</label>
-      <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
+      <input type="text" required class="form-control" id="author" required [(ngModel)]="newQuote.author" name="author" #author='ngModel'
         required>
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Name is Required</p>
       </div>
-    </div>
-      Display {{newQuote.name}}
     
+      Display {{newQuote.name}}
+    </div>
     <hr>
     <div class="form-group">
 

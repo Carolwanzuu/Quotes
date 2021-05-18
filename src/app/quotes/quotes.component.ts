@@ -33,12 +33,12 @@ export class QuotesComponent implements OnInit {
     addNewQuote(quote){
       let quoteLength = this.quotes.length;
       quote.id = quoteLength+1;
-      //quoteLength.completeDate = new Date(quote.completeDate)
+      quote.completeDate = new Date(quote.completeDate)
       this.quotes.push(quote)
     }
   
     upVotes:number=0;
-    upVote(){
+    upVote(index){
       this.upVotes=this.upVotes+1;
 
     }
