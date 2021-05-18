@@ -4,31 +4,31 @@
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-group">
       <label for="name">Author</label>
-      <input type="text" required class="form-control" id="author" required [(ngModel)]="newQuote.author" name="author" #author='ngModel'
-        required>
+      <input type="text" required class="form-control" id="author" required [(ngModel)]="newQuote.author" name="author"
+        #author='ngModel' required>
       <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Name is Required</p>
       </div>
-    
-      Display {{newQuote.name}}
+      <!-- Display {{newQuote.name}} -->
     </div>
     <hr>
     <div class="form-group">
 
       <label for="description">Description</label>
-      <textarea required class="form-control" id="description" [(ngModel)]="newQuote.description" description="description" #description='ngModel' required></textarea>
+      <textarea required class="form-control" id="description" [(ngModel)]="newQuote.description"
+        description="description" #description='ngModel' required></textarea>
       <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
         <p>Description is required</p>
       </div>
-      Display {{newQuote.description}}
+      <!-- Display {{newQuote.description}} -->
     </div>
     <hr>
     <div class="form-group">
-      <label for="author">Submitted by</label>
-      <input type="author" required class="form-control" id="author" [(ngModel)]="newQuote.author" author="author" #author='ngModel'
-        required>
-      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-        <p>Name is Required</p>
+      <label for="author">Submitted </label>
+      <input type="text" required class="form-control" id="submitted" [(ngModel)]="newQuote.author" author="submitted"
+        #submitted='ngModel' required>
+      <div [hidden]="submitted.valid || submitted.pristine" class="alert alert-danger">
+        <p>Submission name required</p>
       </div>
     </div>
     <hr>
@@ -40,7 +40,7 @@
         <p>Date is required</p>
       </div>
     </div>
-    
+
     <button type="submit" class="btn btn-info">Add Quote</button>
   </form>
 </div>
