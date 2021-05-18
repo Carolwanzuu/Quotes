@@ -10,12 +10,12 @@ export class QuotesComponent implements OnInit {
 
   title:'Quotes';
   quotes:Quote[]=[
-    new Quote(1, 'Anais Nin', 'We write to taste life twice, in the moment and in retrospect','Swinter', new Date(2021,4,20)),
-    new Quote(2, 'Mark Twain', 'One day I will find the right words, and they will be simple.', 'Chacha', new Date(2018,10,13)),
-    new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.', 'Debby', new Date(2014,6, 29)),
-    new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.','Milton', new Date(2020,1,12)),
-    new Quote(5, 'Harper Lee','You never really understand a person until you consider things from his point of view. Until you climb inside of his skin and walk around in it.','Cliff', new Date(2015,7,22)),
-    new Quote(6, 'John Keats', 'I was never afraid of failure; for I would sooner fail than not be among the greatest.', 'Carol', new Date(2019,11,23))
+    new Quote(1, 'Anais Nin', 'We write to taste life twice, in the moment and in retrospect','Swinter', new Date(2021,4,20),67,5),
+    new Quote(2, 'Mark Twain', 'One day I will find the right words, and they will be simple.', 'Chacha', new Date(2018,10,13),122,24),
+    new Quote(3, 'Robert Frost', 'No tears in the writer, no tears in the reader.', 'Debby', new Date(2014,6, 29),321,109),
+    new Quote(4, 'Henry David', 'How vain it is to sit down to write when you have not stood up to live.','Milton', new Date(2020,1,12),231,126),
+    new Quote(5, 'Harper Lee','You never really understand a person until you consider things from his point of view. Until you climb inside of his skin and walk around in it.','Cliff', new Date(2015,7,22),34,6),
+    new Quote(6, 'John Keats', 'I was never afraid of failure; for I would sooner fail than not be among the greatest.', 'Carol', new Date(2019,11,23),215,78)
   ];
 
   toggleDetails(index){
