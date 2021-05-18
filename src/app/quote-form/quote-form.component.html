@@ -13,7 +13,7 @@
       </div>
       Display {{newQuote.author}}
     </div>
-
+    <hr>
     <div class="form-group">
 
       <label for="description">Description</label>
@@ -24,6 +24,7 @@
       </div>
       Display{{newQuote.description}}
     </div>
+    <hr>
     <div class="form-group">
       <label for="name">Name of the person posting</label>
       <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
@@ -32,6 +33,7 @@
         <p>Name is Required</p>
       </div>
     </div>
+    <hr>
     <div class="form-group">
       <label for="complete">Date Posted</label>
       <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel"
@@ -40,6 +42,7 @@
         <p>Date is required</p>
       </div>
     </div>
+    
     <button type="submit" class="btn btn-info">Add Quote</button>
   </form>
 </div>

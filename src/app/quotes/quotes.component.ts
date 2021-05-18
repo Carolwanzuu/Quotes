@@ -40,6 +40,7 @@ export class QuotesComponent implements OnInit {
     upVotes:number=0;
     upVote(){
       this.upVotes=this.upVotes+1;
+
     }
 
     downVotes:number=0;
